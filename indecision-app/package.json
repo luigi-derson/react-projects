@@ -4,6 +4,9 @@
   "main": "index.js",
   "author": "Luigi Derson",
   "license": "MIT",
+  "scripts": {
+    "dev-server": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+  },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1"
