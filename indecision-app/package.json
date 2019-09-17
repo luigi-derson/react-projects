@@ -5,7 +5,8 @@
   "author": "Luigi Derson",
   "license": "MIT",
   "scripts": {
-    "dev-server": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+    "dev-server": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "live": "live-server public --browser=FIREFOX"
   },
   "dependencies": {
     "babel-preset-env": "^1.7.0",
