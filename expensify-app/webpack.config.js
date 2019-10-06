@@ -8,7 +8,7 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.js$/,
+            test: /\.(js|jsx)$/,
             exclude: /node_modules/,
             use: {
                 loader: 'babel-loader',
@@ -20,7 +20,17 @@ module.exports = {
         }, {
             test: /\.s?css$/,
             use: ['style-loader', 'css-loader', 'sass-loader']
-        }]
+        }, /* {
+            test: /\.js$/,
+            enforce: 'pre',
+            exclude: /node_modules/,
+            use: {
+                loader: 'eslint-loader',
+                options: {
+                    configFile: path.join(__dirname, '/.eslintrc.json')
+                }
+            }
+        } */]
     },
     devServer: {
         contentBase: path.join(__dirname, 'public'),

@@ -24,19 +24,19 @@ const store = createStore((state = { count: 0 }, action) => {
         case 'INCREMENT':
             return {
                 count: state.count + action.incrementBy
-            }
+            };
         case 'DECREMENT':
             return {
                 count: state.count - action.decrementBy
-            }
+            };
         case 'SET':
             return {
                 count: action.count
-            }
+            };
         case 'RESET':
             return {
                 count: 0
-            }
+            };
         default:
             return state;
     }
@@ -44,7 +44,7 @@ const store = createStore((state = { count: 0 }, action) => {
 
 const unsubscribe = store.subscribe(() => {
     console.log(store.getState());
-})
+});
 
 store.dispatch(incrementCount());
 store.dispatch(incrementCount({ incrementBy: 5 }));
@@ -65,7 +65,7 @@ const person = {
         city: 'Manchester',
         temp: 5
     }
-}
+};
 
 const items = ['one', 'two', 'three'];
 const [primero,...resto] = items;
@@ -73,7 +73,7 @@ const [primero,...resto] = items;
 const {city, temp} = person.location;
 const {...test} = person.location;
 
-/* console.log(city,temp)
-console.log(test)
-console.log(primero)
-console.log(resto) */
+console.log(city,temp);
+console.log(test);
+console.log(primero);
+console.log(resto);

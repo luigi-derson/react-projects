@@ -1,4 +1,4 @@
-import { createStore, combineReducers} from 'redux';
+import { createStore, combineReducers } from 'redux';
 import uuid from 'uuid';
 
 // Actions
@@ -53,7 +53,6 @@ const setEndDate = (endDate) => ({
 });
 
 // Setup expenses reducer
-
 const expensesReducerDefaultState = [];
 
 const expensesReducer = (state = expensesReducerDefaultState, action) => {
