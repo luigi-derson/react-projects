@@ -38,7 +38,7 @@ test('should generate set text filter', () => {
     expect(action).toEqual({
         type: 'SET_TEXT_FILTER',
         text: 'Some search'
-    })
+    });
 });
 
 test('should generate set text filter', () => {
