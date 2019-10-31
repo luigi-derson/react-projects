@@ -16,10 +16,7 @@
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    "plugins": [
-        "react",
-        "babel"
-    ],
+    "plugins": ["react", "babel"],
     "rules": {
         "semi": ["error", "always"]
     }

@@ -1,15 +1,6 @@
 {
-    "setupFiles": [
-        "raf/polyfill",
-        "<rootDir>/src/tests/setupTests.js"
-    ],
-    "snapshotSerializers": [
-        "enzyme-to-json/serializer"
-    ],
-    "moduleDirectories": [
-        "node_modules"
-    ],
-    "transformIgnorePatterns": [
-        "/node_modules/(?!lodash-es).+\\.js$"
-    ]
+    "setupFiles": ["raf/polyfill", "<rootDir>/src/tests/setupTests.js"],
+    "snapshotSerializers": ["enzyme-to-json/serializer"],
+    "moduleDirectories": ["node_modules"],
+    "transformIgnorePatterns": ["/node_modules/(?!lodash-es).+\\.js$"]
 }
