@@ -9,7 +9,6 @@ export const Header = ({ startLogout }) => (
         <ul>
             <li><NavLink to="/dashboard" activeClassName="is-active">Dashboard</NavLink></li>
             <li><NavLink to="/create" activeClassName="is-active">Create expense</NavLink></li>
-            <li><NavLink to="/help" activeClassName="is-active">Help</NavLink></li>
             <li><button onClick={startLogout}>Log out</button></li>
         </ul>
     </header>
