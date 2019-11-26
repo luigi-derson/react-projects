@@ -1,21 +1,29 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { connect } from "react-redux";
-import { startLogout } from "../actions/auth";
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { startLogout } from '../actions/auth';
 
-export const Header = ({ startLogout }) => (
-    <header>
-        <h1>Expensify</h1>
-        <ul>
-            <li><NavLink to="/dashboard" activeClassName="is-active">Dashboard</NavLink></li>
-            <li><NavLink to="/create" activeClassName="is-active">Create expense</NavLink></li>
-            <li><button onClick={startLogout}>Log out</button></li>
-        </ul>
-    </header>
+export const Header = ({ startLogoutAction }) => (
+  <header className="header">
+    <div className="content-container">
+      <div className="header__content">
+        <Link className="header__title" to="/dashboard">
+          <h1>Expensify</h1>
+        </Link>
+        <button
+          className="button button__link"
+          type="button"
+          onClick={startLogoutAction}
+        >
+          Logout
+        </button>
+      </div>
+    </div>
+  </header>
 );
 
-const mapDispatchToProps = (dispatch) => ({
-    startLogout: () => dispatch(startLogout())
+const mapDispatchToProps = dispatch => ({
+  startLogoutAction: () => dispatch(startLogout())
 });
 
 export default connect(undefined, mapDispatchToProps)(Header);
