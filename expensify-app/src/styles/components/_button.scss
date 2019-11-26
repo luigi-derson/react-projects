@@ -2,25 +2,30 @@
   background: $blue;
   font-size: $font-size-large;
   color: white;
-  border-radius: 5px;
+  border-radius: 3px;
   border: none;
   padding: $s-size $xl-size;
   font-weight: 300;
   line-height: 1;
   display: inline-block;
   text-decoration: none;
-}
-
-.button:hover,
-.button:active {
-  background: darken($blue, 5%);
+  &:hover,
+  &:active {
+    background: darken($blue, 5%);
+  }
 }
 
 .button__link {
   background: none;
+  &:hover,
+  &:active {
+    background: none;
+  }
 }
 
-.button__link:hover,
-.button__link:active {
-  background: none;
+.button--secondary {
+  background: #888;
+  &:hover {
+    background: darken(#888, 5%);
+  }
 }
